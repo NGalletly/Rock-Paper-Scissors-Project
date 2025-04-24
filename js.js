@@ -1,23 +1,60 @@
 console.log("Hello World");
 
+let computerChoice = "aa";
+let humanChoice = "";
+
 function getComputerChoice() {
   let choice = Math.floor(Math.random() * 100);
-  console.log(choice);
 
-  let decision = choice <= 33 ? "rock" : choice <= 66 ? "paper" : "scissors";
-  console.log(decision);
-  return decision;
+  computerChoice = choice <= 33 ? "Rock" : choice <= 66 ? "Paper" : "Scissors";
+  //   console.log(computerChoice);
+  return computerChoice;
 }
 
 getComputerChoice();
-
-let humanAnswer = "";
+console.log(computerChoice);
 
 function getHumanChoice() {
-  humanAnswer = prompt("rock paper scissors?");
+  humanChoice = prompt("rock paper scissors?");
+  return humanChoice;
 }
 
 getHumanChoice();
-console.log(humanAnswer);
+// console.log(humanChoice);
 
 // console.log(typeof humanAnswer);
+
+let humanScore = 0;
+let computerScore = 0;
+
+
+let r = "Rock";
+let p = "Paper";
+let s = "Scissors"
+
+let yw = "You win!"
+let yl = "You Lose!"
+let pbr ="Paper beats Rock!";
+let rbs ="Rock beats Scissors!"
+let sbp = "Scissors beats Paper!"
+yd = "You Draw!"
+
+// Start of game JS
+
+function playRound(humanChoice, computerChoice) {
+  // Function and reassignment of Capitalized and lower case choices.
+  function capitalized(x) {
+    return x[0].toUpperCase() + x.slice(1).toLowerCase();
+  }
+  humanChoice = capitalized(humanChoice);
+  computerChoice = capitalized(computerChoice);
+
+  console.log(humanChoice, computerChoice);
+
+  //   Game Logic start:
+
+  if 
+
+}
+
+playRound(humanChoice, computerChoice);
