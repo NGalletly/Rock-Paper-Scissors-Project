@@ -11,21 +11,10 @@ function getComputerChoice() {
   return computerChoice;
 }
 
-// getComputerChoice();
-// console.log(computerChoice);
-
 function getHumanChoice() {
   humanChoice = prompt("rock paper scissors?");
   return humanChoice;
 }
-
-// getHumanChoice();
-// console.log(humanChoice);
-
-// console.log(typeof humanAnswer);
-
-// let humanScore = 0;
-// let computerScore = 0;
 
 let r = "Rock";
 let p = "Paper";
@@ -38,10 +27,8 @@ let rbs = "Rock beats Scissors!";
 let sbp = "Scissors beats Paper!";
 let yd = "You Draw!";
 
-// Start of game JS
-
 /*
-
+// playRound function
 
 function playRound(humanChoice, computerChoice) {
   // Function and reassignment of Capitalized and lower case choices.
@@ -78,8 +65,6 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-
-
 */
 
 // PLAY GAME FUNCTION
@@ -88,11 +73,8 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
-  // getComputerChoice();
-  // getHumanChoice();
-
   function playRound(humanChoice, computerChoice) {
-    // Function and reassignment of Capitalized and lower case choices.
+    // Function to make both choices uniform for comparison.
     function capitalized(x) {
       return x[0].toUpperCase() + x.slice(1).toLowerCase();
     }
@@ -101,7 +83,8 @@ function playGame() {
 
     console.log(humanChoice, computerChoice);
 
-    //   Game Logic start:
+    //   Game Logic start: Brute force method
+    // Refer to variables above for outputs. Use template literals next time.
 
     if (humanChoice === computerChoice) {
       console.log(yd);
@@ -130,7 +113,7 @@ function playGame() {
     );
   }
 
-  // playRound(humanChoice, computerChoice);
+  // Logic for playing the game repeatedly until winner is decided
 
   let n = 0;
 
