@@ -27,17 +27,16 @@ getHumanChoice();
 let humanScore = 0;
 let computerScore = 0;
 
-
 let r = "Rock";
 let p = "Paper";
-let s = "Scissors"
+let s = "Scissors";
 
-let yw = "You win!"
-let yl = "You Lose!"
-let pbr ="Paper beats Rock!";
-let rbs ="Rock beats Scissors!"
-let sbp = "Scissors beats Paper!"
-yd = "You Draw!"
+let yw = "You win! ";
+let yl = "You Lose! ";
+let pbr = "Paper beats Rock!";
+let rbs = "Rock beats Scissors!";
+let sbp = "Scissors beats Paper!";
+let yd = "You Draw!";
 
 // Start of game JS
 
@@ -53,8 +52,29 @@ function playRound(humanChoice, computerChoice) {
 
   //   Game Logic start:
 
-  if 
-
+  if (humanChoice === computerChoice) {
+    console.log(yd);
+  } else if (humanChoice == r && computerChoice == s) {
+    console.log(yw + rbs);
+    humanScore++;
+  } else if (humanChoice == r && computerChoice == p) {
+    console.log(yl + pbr);
+    computerScore++;
+  } else if (humanChoice == p && computerChoice == r) {
+    console.log(yw + pbr);
+    humanScore++;
+  } else if (humanChoice == p && computerChoice == s) {
+    console.log(yl + sbp);
+    computerScore++;
+  } else if (humanChoice == s && computerChoice == p) {
+    console.log(yw + sbp);
+    humanScore++;
+  } else if (humanChoice == s && computerChoice == r) {
+    console.log(yl + rbs);
+    computerScore++;
+  }
 }
 
 playRound(humanChoice, computerChoice);
+
+console.log(humanScore, computerScore);
