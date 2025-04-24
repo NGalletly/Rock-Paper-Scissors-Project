@@ -88,8 +88,8 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
-  getComputerChoice();
-  getHumanChoice();
+  // getComputerChoice();
+  // getHumanChoice();
 
   function playRound(humanChoice, computerChoice) {
     // Function and reassignment of Capitalized and lower case choices.
@@ -124,19 +124,29 @@ function playGame() {
       console.log(yl + rbs);
       computerScore++;
     }
+    console.log(
+      "Human Score: " + humanScore,
+      "Computer Score: " + computerScore
+    );
   }
 
-  playRound(humanChoice, computerChoice);
-  console.log("Human Score: " + humanScore, "Computer Score: " + computerScore);
+  // playRound(humanChoice, computerChoice);
 
-  if (humanScore >= 5) {
-    console.log("Game over, human wins!");
-  } else if (computerScore >= 5) {
-    console.log("Game over, Computer wins!");
-  } else {
-    getComputerChoice();
-    getHumanChoice();
-    playRound(humanChoice, computerChoice);
+  let n = 0;
+
+  while (n < Infinity) {
+    if (humanScore >= 5) {
+      console.log("Game over, human wins!");
+      break;
+    } else if (computerScore >= 5) {
+      console.log("Game over, Computer wins!");
+      break;
+    } else {
+      getComputerChoice();
+      getHumanChoice();
+      playRound(humanChoice, computerChoice);
+    }
+    n++;
   }
 }
 
